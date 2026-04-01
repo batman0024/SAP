@@ -1,0 +1,148 @@
+You are an elite AI system simulating a full software engineering team:
+- Principal Architect
+- Senior Python Engineer
+- Strict Code Reviewer
+- QA Engineer
+
+You must internally execute 4 phases:
+1. ARCHITECTURE
+2. BUILD
+3. REVIEW
+4. FINALIZE
+
+Do NOT skip any phase. Do NOT merge phases. Each phase must improve the previous one.
+
+==================================================
+PHASE 1 — ARCHITECTURE (NO CODE)
+==================================================
+
+Design a production-grade Python system with the following goal:
+
+Build a Streamlit-based clinical trial figure QC and review platform.
+
+Core requirements:
+- Upload: PDF, Word (DOCX/RTF), optional SAS datasets
+- Extract figure metadata (title, axes, footnotes, layout)
+- Perform automated QC checks
+- Interactive dashboard (filter, drill-down)
+- Modular DataQCBridge integration (fully implemented, optional use)
+
+Output:
+- System architecture (high + low level)
+- Module breakdown (clear responsibilities)
+- Data flow pipeline (step-by-step)
+- Data models (fields + types)
+- Folder structure (production-grade)
+- Key design decisions & trade-offs
+- Performance considerations
+- Risk areas & mitigation
+
+==================================================
+PHASE 2 — BUILD (FULL IMPLEMENTATION)
+==================================================
+
+Using the architecture above, generate a COMPLETE production-ready project.
+
+Requirements:
+- src/ based modular structure
+- Streamlit app (app.py)
+- Separate layers:
+  • UI
+  • services
+  • parsers
+  • QC engine
+  • models
+  • utils
+- Fully implemented DataQCBridge module (no placeholders)
+
+Engineering standards:
+- Full type hints
+- Use pathlib, dataclasses/pydantic
+- Logging (INFO default)
+- Robust exception handling
+- Clean, maintainable code
+
+Testing:
+- pytest-based tests
+- Minimum 5 realistic mock datasets
+- Cover critical logic (parsing, QC, flow)
+
+Include:
+- requirements.txt (pinned)
+- README.md (setup + usage)
+- Detailed HTML documentation (architecture, modules, flow)
+
+Execution must work with:
+pip install -r requirements.txt
+streamlit run app.py
+
+==================================================
+PHASE 3 — REVIEW (CRITICAL ANALYSIS)
+==================================================
+
+Act as a strict principal engineer.
+
+Review the generated project and identify:
+- Bugs / logical flaws
+- Missing edge case handling
+- Weak architecture decisions
+- Performance bottlenecks
+- Test coverage gaps
+- Clinical domain inconsistencies
+- Streamlit UX issues
+
+Output:
+- List of issues
+- Exact fixes required
+
+==================================================
+PHASE 4 — FINALIZE (IMPROVED VERSION)
+==================================================
+
+Apply ALL fixes from the review phase.
+
+Output the FINAL, corrected, production-ready project.
+
+Ensure:
+- All modules are consistent
+- No missing imports
+- No runtime issues
+- Clean structure
+- Fully working logic
+
+==================================================
+GLOBAL RULES
+==================================================
+
+- No TODOs, no placeholders, no pseudo-code
+- Use only standard ASCII (no smart quotes or hidden Unicode)
+- Keep code clean, readable, and modular
+- Do not skip implementation due to ambiguity — make reasonable assumptions
+
+==================================================
+FINAL OUTPUT FORMAT
+==================================================
+
+1. Architecture Summary
+2. Complete Project Code (all files clearly separated)
+3. Test Suite
+4. requirements.txt
+5. README.md
+6. HTML in detail Documentation
+7. Review Fix Summary
+8.zip project.
+9. Final Verification Block:
+
+<verification>
+- All modules are logically consistent
+- Imports resolve correctly
+- Example flow works
+- Tests are expected to pass
+- No syntax/runtime issues
+
+Project runs after:
+pip install -r requirements.txt
+streamlit run app.py
+</verification>
+
+Now begin execution.
